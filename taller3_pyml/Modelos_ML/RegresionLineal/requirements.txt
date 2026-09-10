@@ -1,7 +1,7 @@
-FASTAPI
-UVICORN
-SCIKIT-LEARN
-JOBLIB
-PYDANTIC
-NUMPY
-MATPLOTLIB
+fastapi
+uvicorn[standard]
+scikit-learn
+joblib
+pydantic
+numpy
+matplotlib
