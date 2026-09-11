@@ -1,8 +1,7 @@
-﻿// =============================================
+// =============================================
 // CONFIGURACION - cambia esto por tu URL de Railway
 // =============================================
-const API_URL = "https://TU-URL.up.railway.app";
-// Ejemplo: const API_URL = "https://regresionlineal-production.up.railway.app";
+const API_URL = "https://machinelearning-production-f58d.up.railway.app";
 
 // =============================================
 // SINCRONIZAR SLIDER <-> INPUT
