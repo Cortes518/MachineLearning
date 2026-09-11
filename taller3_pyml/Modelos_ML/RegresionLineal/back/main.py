@@ -9,7 +9,7 @@ from sklearn.linear_model import LinearRegression
 app = FastAPI(
     title="API de Regresion Lineal",
     description="API para predecir precios de viviendas segun la superficie en m2",
-    version="1.0.1"
+    version="1.0.2"
 )
 
 # Permitir peticiones desde cualquier origen (necesario para el frontend)
