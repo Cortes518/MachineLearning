@@ -2,6 +2,7 @@ import os
 import joblib
 import numpy as np
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from sklearn.linear_model import LinearRegression
 
@@ -9,6 +10,14 @@ app = FastAPI(
     title="API de Regresion Lineal",
     description="API para predecir precios de viviendas segun la superficie en m2",
     version="1.0.0"
+)
+
+# Permitir peticiones desde cualquier origen (necesario para el frontend)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

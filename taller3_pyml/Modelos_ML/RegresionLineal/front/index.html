@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Predictor de Precios - Regresion Lineal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <div class="card">
+      <!-- Header -->
+      <div class="header">
+        <div class="icon">🏠</div>
+        <h1>Predictor de Precios</h1>
+        <p class="subtitle">Estima el precio de tu vivienda segun su superficie</p>
+      </div>
+
+      <!-- Form -->
+      <div class="form-section">
+        <label for="area">Superficie de la vivienda (m²)</label>
+        <div class="input-wrapper">
+          <input
+            type="number"
+            id="area"
+            min="10"
+            max="500"
+            step="0.5"
+            placeholder="Ej: 85"
+          />
+          <span class="unit">m²</span>
+        </div>
+
+        <!-- Slider -->
+        <input
+          type="range"
+          id="slider"
+          min="10"
+          max="500"
+          step="0.5"
+          value="85"
+          class="slider"
+        />
+        <div class="slider-labels">
+          <span>10 m²</span>
+          <span id="slider-value">85 m²</span>
+          <span>500 m²</span>
+        </div>
+
+        <button id="predict-btn" onclick="predict()">
+          <span id="btn-text">🔍 Predecir Precio</span>
+          <span id="btn-spinner" class="spinner hidden"></span>
+        </button>
+      </div>
+
+      <!-- Result -->
+      <div id="result-card" class="result-card hidden">
+        <div class="result-label">Precio estimado</div>
+        <div id="result-price" class="result-price"></div>
+        <div id="result-detail" class="result-detail"></div>
+        <div class="disclaimer">⚠️ Valor estimado por modelo de regresion lineal. No es un precio oficial.</div>
+      </div>
+
+      <!-- Error -->
+      <div id="error-card" class="error-card hidden">
+        <span>❌</span> <span id="error-msg">Error al conectar con el servidor.</span>
+      </div>
+
+      <!-- Status -->
+      <div class="status-bar">
+        <span id="api-status" class="status-dot offline"></span>
+        <span id="api-status-text">Verificando API...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
