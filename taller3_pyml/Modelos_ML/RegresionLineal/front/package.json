@@ -1,10 +1,9 @@
 {
   "name": "front-regresion-lineal",
   "version": "1.0.0",
+  "description": "Frontend estatico para prediccion de regresion lineal",
+  "main": "server.js",
   "scripts": {
-    "start": "serve -l tcp://0.0.0.0:$PORT ."
-  },
-  "dependencies": {
-    "serve": "^14.2.0"
+    "start": "node server.js"
   }
 }
