@@ -11,7 +11,7 @@ MODEL_PATH = os.path.join(MODELS_DIR, "linear_regression_model.pkl")
 # predecir perecios de viviendas segun la superficie en m2
 # Datos de entrenamiento (x) y (y)
 x = np.array([[50], [60], [70], [80], [90], [100], [110], [120], [130], [140]])
-y = np.array([150000, 180000, 210000, 240000, 270000, 300000, 330000, 360000, 390000, 420000])
+y = np.array([350000000, 420000000, 490000000, 560000000, 630000000, 700000000, 770000000, 840000000, 910000000, 980000000])
 
 # Crear y entrenar el modelo
 model = LinearRegression()
