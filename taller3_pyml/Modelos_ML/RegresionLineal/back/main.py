@@ -9,7 +9,7 @@ from sklearn.linear_model import LinearRegression
 app = FastAPI(
     title="API de Regresion Lineal",
     description="API para predecir precios de viviendas segun la superficie en m2",
-    version="1.0.2"
+    version="1.0.3"
 )
 
 # Permitir peticiones desde cualquier origen (necesario para el frontend)
@@ -36,9 +36,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "models", "linear_regression_model.pkl")
 
 def train_and_save():
-    """Entrena el modelo y lo guarda si no existe el archivo .pkl."""
+    """Entrena el modelo y lo guarda."""
     x = np.array([[50], [60], [70], [80], [90], [100], [110], [120], [130], [140]])
-    y = np.array([150000, 180000, 210000, 240000, 270000, 300000, 330000, 360000, 390000, 420000])
+    y = np.array([350000000, 420000000, 490000000, 560000000, 630000000, 700000000, 770000000, 840000000, 910000000, 980000000])
     m = LinearRegression()
     m.fit(x, y)
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
@@ -46,20 +46,20 @@ def train_and_save():
     print(f"Modelo entrenado y guardado en: {MODEL_PATH}")
     return m
 
-# Cargar o entrenar el modelo
-try:
-    model = joblib.load(MODEL_PATH)
-    print("Modelo cargado correctamente.")
-except Exception:
-    print("Modelo no encontrado, entrenando...")
-    model = train_and_save()
+# Entrenar al iniciar para garantizar siempre los datos más recientes
+model = train_and_save()
 
 class housem2(BaseModel):
     area_m2: float = Field(..., examples=[82.5], description="Superficie de la vivienda en metros cuadrados")
 
 @app.get("/")
 def health():
-    return {"message": "API de Regresion Lineal - Salud OK", "status": "OK", "model_loaded": model is not None}
+    return {
+        "message": "API de Regresion Lineal - Salud OK",
+        "status": "OK",
+        "model_loaded": model is not None,
+        "version": "1.0.3"
+    }
 
 @app.post("/predict")
 def predict_price(data: housem2):
