@@ -20,7 +20,8 @@ Este repositorio contiene la implementación, entrenamiento y despliegue de tres
 ---
 
 ### 3. 👁️ Visión Artificial (Detección de Rostros con OpenCV)
-- **Demostración / App / Notebook:** *[Insertar link de despliegue o Binder aquí]*
+- **Ejecutar Notebook en la Nube (Binder):** [Abrir en MyBinder](https://mybinder.org/v2/gh/Cortes518/MachineLearning/main?labpath=taller3_pyml%2FModelos_ML%2FVisionArtificial%2Fubdex.ipynb)
+- **Ver Notebook en GitHub:** [Ver ubdex.ipynb](https://github.com/Cortes518/MachineLearning/blob/main/taller3_pyml/Modelos_ML/VisionArtificial/ubdex.ipynb)
 
 ---
 
@@ -28,7 +29,7 @@ Este repositorio contiene la implementación, entrenamiento y despliegue de tres
 
 `
 Modelos_ML/
-├── Random_Forest/           # Clasificación de Enfermedades (Streamlit)
+├── RandomForest/            # Clasificación de Enfermedades (Streamlit)
 │   ├── 1.Crear_dataset.py
 │   ├── 2.Entrenar_modelo.py
 │   └── 3.Predecir_enfermedad.py
