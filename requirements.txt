@@ -3,5 +3,3 @@ pandas
 scikit-learn
 joblib
 plotly
-opencv-python-headless==4.14.0.94
-matplotlib
