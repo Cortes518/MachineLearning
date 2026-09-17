@@ -19,8 +19,8 @@ Este repositorio contiene la implementación, entrenamiento y despliegue de tres
 
 ---
 
-### 3. 👁️ Visión Artificial (Detección de Rostros con OpenCV)
-- **Demostración / App / Notebook:** *[Insertar link de despliegue o Binder aquí]*
+### 3. 👁️ Visión Artificial (Clonado del repositorio del profe)
+- **Despliegue Versel:** *[Insertar link de despliegue o Binder aquí]*
 
 ---
 
