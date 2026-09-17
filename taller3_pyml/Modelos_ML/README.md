@@ -14,13 +14,12 @@ Este repositorio contiene la implementación, entrenamiento y despliegue de tres
 ---
 
 ### 2. 🌲 Random Forest (Predicción de Enfermedades Médicas)
-- **Aplicación Web (Streamlit):** *[Insertar link de despliegue aquí]*
-- **Backend / API (si aplica):** *[Insertar link de despliegue aquí]*
+- **Aplicación Web (Streamlit):https://taller3-pymlmodelos-mlrandomforest3-predecir-enf-eouiwd.streamlit.app/
 
 ---
 
 ### 3. 👁️ Visión Artificial (Clonado del repositorio del profe)
-- **Despliegue Versel:** *[Insertar link de despliegue o Binder aquí]*
+- **Despliegue Versel:** https://machine-learning-dusky-alpha.vercel.app/
 
 ---
 
